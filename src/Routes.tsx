@@ -4,6 +4,7 @@ import About from "./components/About";
 
 const MainRoutes = () => (
   <Routes>
+    <Route path="/" element={<Home />} />
     <Route path="/home" element={<Home />} />
     <Route path="/about" element={<About />} />
     <Route path="/code" element={<h1>Hello code</h1>} />
