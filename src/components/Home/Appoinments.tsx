@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { commonCardData } from "../../Data/commonCardData";
 
 const Appointments = () => {
@@ -37,7 +37,7 @@ const Appointments = () => {
       </div>
       <div>
         {commonCardData.map((item, i) => (
-          <div className="flex justify-between items-center mb-2">
+          <div className="flex justify-between items-center mb-2" key={i}>
             <div className="flex items-center gap-3">
               <span>
                 <img className="w-5 h-5 rounded-full " src={item.user} alt="" />

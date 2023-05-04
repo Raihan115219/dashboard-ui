@@ -1,4 +1,3 @@
-import React from "react";
 import { BiFullscreen } from "react-icons/bi";
 import { todaysAppoint } from "../../Data/todaysApointData";
 
