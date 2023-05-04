@@ -1,7 +1,3 @@
-import { TbPhoneCall, TbWorld } from "react-icons/tb";
-import { MdOutlinePhoneAndroid } from "react-icons/md";
-import { IoMdCall } from "react-icons/io";
-import { BiRun } from "react-icons/bi";
 import { FiUsers } from "react-icons/fi";
 
 export const todaysAppoint = [
