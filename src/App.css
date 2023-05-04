@@ -1,0 +1,35 @@
+:root {
+  --black: #242d49;
+}
+
+.App {
+  /* padding: 0.5rem 3.5rem; */
+  color: var(--black);
+  background-color: rgb(224, 224, 224);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Inter", sans-serif;
+}
+
+.AppGlass {
+  display: grid;
+  height: 100%;
+  width: 100%;
+  grid-template-columns: 11rem auto 5rem;
+  overflow: hidden;
+  margin-left: -10px;
+}
+
+.menuItem {
+  border-radius: 8px;
+  font-size: 1.5rem /* 24px */;
+  line-height: 2rem /* 32px */;
+  padding: 10px;
+}
+
+.active {
+  color: orange;
+  background: #000;
+  border-radius: 15px;
+}
