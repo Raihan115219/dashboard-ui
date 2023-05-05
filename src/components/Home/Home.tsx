@@ -1,25 +1,46 @@
 import { useState } from "react";
-import Week from "./Week";
+import Tab from "../common/Tab";
 import { BsToggleOff, BsToggleOn } from "react-icons/bs";
 import SmallCards from "./SmallCards";
 import TodaysAppointMents from "./TodaysAppointMents";
 import Appointments from "./Appoinments";
-import Products from "./Products";
+import Products from "./NewGadegts";
 import { infoData } from "../../Data/HomeInfoData";
+import NewGadegts from "./NewGadegts";
 
 const Home = () => {
   const [toggle, setToogle] = useState(false);
+
+  const TabData = [
+    {
+      id: 1,
+      name: "Today",
+    },
+    {
+      id: 2,
+      name: "This week",
+    },
+    {
+      id: 3,
+      name: "This month",
+    },
+    {
+      id: 4,
+      name: "Last 90 days",
+    },
+  ];
+
   return (
     <div>
       <div className="flex justify-between items-center">
         <div>
-          <Week />
+          <Tab TabData={TabData} />
         </div>
-        <div className="flex justify-between items-center gap-3 text-xl">
+        <div className="flex justify-between items-center gap-3 text-[8px]">
           <span
-            className={`${toggle ? "text-orange-400" : "text-black"} font-bold`}
+            className={`${toggle ? "text-[#e79a37]" : "text-black"} font-[600]`}
           >
-            Rankings
+            Bookings
           </span>
           <span onClick={() => setToogle(!toggle)} className="cursor-pointer">
             {toggle ? (
@@ -29,7 +50,7 @@ const Home = () => {
             )}
           </span>
           <span
-            className={`${toggle ? "text-black" : "text-orange-400"} font-bold`}
+            className={`${toggle ? "text-black" : "text-[#e79a37]"} font-[600]`}
           >
             checking
           </span>
@@ -45,10 +66,10 @@ const Home = () => {
       <section>
         <div className="my-5">
           <div className="flex md:flex-row justify-between mx-auto gap-3">
-            <div className="w-9/12">
+            <div className="w-3/5">
               <TodaysAppointMents />
             </div>
-            <div className="w-1/4">
+            <div className="w-2/5">
               <Appointments />
             </div>
           </div>
@@ -63,7 +84,7 @@ const Home = () => {
             <Appointments />
           </div>
           <div className="">
-            <Products />
+            <NewGadegts />
           </div>
         </div>
       </section>

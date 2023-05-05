@@ -3,17 +3,22 @@ interface IProps {
 }
 
 const SmallCards = ({ item }: IProps) => {
+  console.log(item);
   return (
-    <div className=" bg-base-100 w-48 h-28 shadow-md rounded-md">
+    <div className=" bg-[#ffffff] w-48 h-28 shadow-md rounded-md">
       <div className="card-body">
-        <div className="flex justify-around items-center gap-1 ">
-          <div className="w-15 h-15 rounded-full bg-green-200 p-2 flex justify-center items-center ">
-            <span className="text-xl text-center">{item.icon}</span>
+        <div className="flex  items-center gap-2 ">
+          <div
+            className={`w-[30px] h-[30px] rounded-full p-5  opacity-30 bg-[${item.bg}]  flex justify-center items-center `}
+          >
+            <span className={` text-[20px]  text-black`}>{item.icon}</span>
           </div>
-          <div className="">
-            <span className="text-xl font-bold">{item.amount}</span>
+          <div>
+            <span className="text-xl font-[700] text-[#31394d]">
+              {item.amount}
+            </span>
             <br />
-            <p className="text-gray-500 text-sm">{item.info}</p>
+            <p className=" text-[8px] text-[#8398ae]">{item.info}</p>
           </div>
         </div>
       </div>

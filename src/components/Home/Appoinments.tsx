@@ -1,56 +1,40 @@
-import { useState } from "react";
 import { commonCardData } from "../../Data/commonCardData";
+import CardHeading from "../common/CardHeading";
 
 const Appointments = () => {
-  const [acitve, setActive] = useState(true);
   return (
-    <div className=" bg-base-100 w-full h-full shadow-md rounded-md p-5">
-      <div className="title flex justify-between items-center ">
-        <div>
-          <h3 className="font-bold text-blue-400">Appointments</h3>
-        </div>
-        <div>
-          <span className="font-bold underline text-orange-500 cursor-pointer">
-            view all
-          </span>
-        </div>
-      </div>
-      <div
-        className={`flex justify-between text-center items-center pt-4 pb-3  cursor-pointer`}
-      >
-        <span
-          onClick={() => setActive(!acitve)}
-          className={`font-bold ${
-            acitve ? "text-orange-500  border-b-orange-600 border-b-4" : ""
-          }`}
-        >
-          Pending
-        </span>
-        <span
-          onClick={() => setActive(!acitve)}
-          className={`font-bold ${
-            acitve ? "" : "text-orange-500  border-b-orange-600 border-b-4"
-          }`}
-        >
-          Complete
-        </span>
-      </div>
-      <div>
+    <div className=" bg-base-100 w-full min-h-full shadow-md rounded-md p-5">
+      <CardHeading
+        heading1="Appointments"
+        heading2="View All"
+        tab1="Pending"
+        tab2="Expired"
+      />
+
+      <div className="mt-5">
         {commonCardData.map((item, i) => (
-          <div className="flex justify-between items-center mb-2" key={i}>
+          <div className="flex justify-between items-center mt-2 mb-2 " key={i}>
             <div className="flex items-center gap-3">
               <span>
-                <img className="w-5 h-5 rounded-full " src={item.user} alt="" />
+                <img
+                  className="w-[40px] h-[40px] rounded-full "
+                  src={item.user}
+                  alt=""
+                />
               </span>
-              <div>
-                <p className="font-bold text-md">{item.name}</p>
-                <span className="text-sm text-gray-200">{item.time}</span>
+              <div className="leading-3">
+                <p className="text-[8px] font-bold text-[#0e1317]">
+                  {item.name}
+                </p>
+                <span className="text-[#8398ae] text-[7px] font-bold">
+                  {item.time}
+                </span>
               </div>
             </div>
-            <div className="flex justify-around">
+            <div className="flex justify-between items-end">
               {item.trends.map((trend, i) => (
                 <img
-                  className="w-5 h-5 rounded-full mx-1"
+                  className="w-5 h-5 rounded-full mx-1 text-start"
                   src={trend.obj}
                   alt="test"
                   key={i}

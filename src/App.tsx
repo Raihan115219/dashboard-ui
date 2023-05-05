@@ -9,10 +9,10 @@ function App() {
       <div>
         <Navbar />
       </div>
-      <div className="App">
+      <div className="App mt-[4rem]">
         <div className="AppGlass">
           <SideBar />
-          <div className="ml-[-75px]">
+          <div className="ml-[-75px] ">
             <MainRoutes />
           </div>
         </div>

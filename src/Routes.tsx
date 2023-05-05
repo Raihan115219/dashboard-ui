@@ -6,6 +6,7 @@ const MainRoutes = () => (
   <Routes>
     <Route path="/" element={<Home />} />
     <Route path="/home" element={<Home />} />
+    <Route path="/home/today" element={<h1>Hello today</h1>} />
     <Route path="/about" element={<About />} />
     <Route path="/code" element={<h1>Hello code</h1>} />
     <Route path="/settings" element={<h1>Hello settings</h1>} />

@@ -1,6 +1,7 @@
 import { FiBell } from "react-icons/fi";
 import { BiEnvelopeOpen, BiChat } from "react-icons/bi";
 import { FaClipboardList } from "react-icons/fa";
+import { RxHamburgerMenu } from "react-icons/rx";
 
 const Navbar = () => {
   const navBarData = [
@@ -12,9 +13,12 @@ const Navbar = () => {
 
   return (
     <div>
-      <div className="bg-white px-10">
+      <div className="bg-white px-10 fixed top-0 z-50 w-full">
         <div className="flex justify-between items-center py-4">
-          <div>
+          <div className="flex gap-3 items-center">
+            <div>
+              <RxHamburgerMenu className="text-xl cursor-pointer mr-3 mt-2" />
+            </div>
             <h3 className="text-2xl cursor-pointer font-bold text-blue-500">
               Brand Name
             </h3>
