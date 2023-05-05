@@ -4,7 +4,6 @@ import { BsToggleOff, BsToggleOn } from "react-icons/bs";
 import SmallCards from "./SmallCards";
 import TodaysAppointMents from "./TodaysAppointMents";
 import Appointments from "./Appoinments";
-import Products from "./NewGadegts";
 import { infoData } from "../../Data/HomeInfoData";
 import NewGadegts from "./NewGadegts";
 
