@@ -5,12 +5,11 @@ const Appointments = () => {
   return (
     <div className=" bg-base-100 w-full min-h-full shadow-md rounded-md p-5">
       <CardHeading
-        heading1="Appointments"
+        heading1="Products"
         heading2="View All"
         tab1="Pending"
         tab2="Expired"
       />
-
       <div className="mt-5">
         {commonCardData.map((item, i) => (
           <div className="flex justify-between items-center mt-2 mb-2 " key={i}>

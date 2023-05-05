@@ -1,16 +1,7 @@
-import { FiBell } from "react-icons/fi";
-import { BiEnvelopeOpen, BiChat } from "react-icons/bi";
-import { FaClipboardList } from "react-icons/fa";
 import { RxHamburgerMenu } from "react-icons/rx";
+import { navBarData } from "../Data/NavBarData";
 
 const Navbar = () => {
-  const navBarData = [
-    { id: 1, name: "Name", icon: <FaClipboardList /> },
-    { id: 2, name: "Name", icon: <FiBell /> },
-    { id: 3, name: "Name", icon: <BiEnvelopeOpen /> },
-    { id: 4, name: "Name", icon: <BiChat /> },
-  ];
-
   return (
     <div>
       <div className="bg-white px-10 fixed top-0 z-50 w-full">
